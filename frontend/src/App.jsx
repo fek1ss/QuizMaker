@@ -1,13 +1,11 @@
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import { useSelector } from 'react-redux';
 import AuthContainer from './pages/AuthPages/AuthContainer';
 import NavBar from './components/NavBar/NavBar';
-import QuizeContainer from './pages/QuizesCards/QuizeContainer';
+import ListofTests from './components/ListofTests/ListofTests';
+import QuestionCard from './pages/QuizesCards/QuestionCard';
+import TestRunner from './components/TestRunner/TestRunner';
 
 function App() {
   const user = useSelector(state => state.auth.user);
@@ -22,11 +20,12 @@ function App() {
         />
         <Route path="/login" element={<AuthContainer />} />
         <Route
-          path="/create-quize"
-          element={user ? <QuizeContainer /> : <AuthContainer />}
+          path="/create-quize/:testId"
+          element={user ? <QuestionCard /> : <AuthContainer />}
         />
         <Route path="/results" element={''} />
-        <Route path="/profile" element={''} />
+        <Route path="/all-quizis" element={<ListofTests />} />
+        <Route path="/get-start/:testId" element={<TestRunner />} />
       </Routes>
     </BrowserRouter>
   );

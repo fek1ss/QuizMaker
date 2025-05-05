@@ -1,0 +1,10 @@
+.testCard {
+  color: var(--off-white);
+  width: 80%;
+  height: 150px;
+  background-color: var(--main-color);
+  border-radius: 8px;
+  border: none;
+  margin: 10px auto;
+  padding: 10px;
+}

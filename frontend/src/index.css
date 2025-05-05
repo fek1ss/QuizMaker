@@ -47,6 +47,7 @@ button {
   border: none;
   margin: 10px;
   cursor: pointer;
+  background-color: var(--second-color);
 }
 
 button:hover {

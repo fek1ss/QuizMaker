@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Test = require('../models/Test');
+const { Test } = require('../models');
 
 // GET /api/tests
 router.get('/', async (req, res) => {
@@ -8,7 +8,8 @@ router.get('/', async (req, res) => {
     const tests = await Test.findAll();
     res.json(tests);
   } catch (err) {
-    res.status(500).json({ error: 'Ошибка при получении тестов' });
+    console.error('Ошибка при создании теста:', err);
+    res.status(500).json({ error: 'Ошибка при получении тестов'});
   }
 });
 

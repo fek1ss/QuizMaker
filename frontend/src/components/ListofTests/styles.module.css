@@ -1,0 +1,40 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.add_btn {
+  width: 80%;
+  height: 50px;
+  margin: 10px auto;
+}
+
+.emptyCard {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  background-color: var(--second-color);
+  width: 80%;
+  padding: 10px 25px;
+  border-radius: 8px;
+  border: none;
+  color: var(--off-white);
+  margin-bottom: 2rem;
+}
+
+.btn_create_test {
+  color: var(--second-color);
+  background-color: var(--off-white);
+}
+
+.inp_emp {
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  width: 80%;
+  background-color: var(--off-white);
+  color: var(--main-color);
+}

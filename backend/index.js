@@ -1,13 +1,6 @@
 require('dotenv').config();
 const app = require('./app');
-const sequelize = require('./config/database');
-
-// Импорт моделей ДО запуска сервера
-require('./models/User');
-require('./models/Test');
-require('./models/Question')
-require('./models/AnswerOption')
-
+const { sequelize } = require('./models');
 
 const PORT = process.env.PORT || 3000;
 

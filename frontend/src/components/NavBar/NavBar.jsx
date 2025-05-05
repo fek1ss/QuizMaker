@@ -21,12 +21,14 @@ const NavBar = () => {
           Welcome
         </Link>{' '}
         &nbsp;
-        <Link to="/create-quize" className={styles.link}>
-          Creating tests
+        <Link to="/all-quizis" className={styles.link}>
+          Tests
         </Link>
+        &nbsp;
         <Link to="/start-quize" className={styles.link}>
           Start the test
         </Link>
+        &nbsp;
         <Link to="/statistics" className={styles.link}>
           Statistics
         </Link>

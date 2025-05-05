@@ -28,7 +28,7 @@ const SignUp = () => {
       password,
     });
 
-    if (response.ok) {
+    if (response) {
       setFormData({
         name: '',
         email: '',

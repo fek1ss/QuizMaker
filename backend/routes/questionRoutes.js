@@ -7,10 +7,8 @@ router.post("/", async (req, res) => {
   try {
     const { testId, text, type, points, options } = req.body;
 
-    // Создание вопроса
     const question = await Question.create({ testId, text, type, points });
 
-    // Если тип не text, то добавляем варианты
     if (type !== "text" && Array.isArray(options)) {
       const formattedOptions = options.map(option => ({
         ...option,

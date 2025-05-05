@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Login from './Login';
 import SignUp from './SignUp';
 import styles from '../../styles/auth.module.css';
-import Quize from './../Quize/Quize';
 import { useDispatch } from 'react-redux';
 import { logout } from '../../reducers/AuthReducer';
 
